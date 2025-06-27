@@ -12,4 +12,7 @@ export default defineNuxtConfig({
       tmdbApiKey: process.env.TMDB_API_KEY,
     },
   },
+  modules: [
+    '@nuxt/icon'
+  ]
 });
