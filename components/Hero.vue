@@ -1,49 +1,38 @@
 <template>
   <div
-    class="w-full h-[330px] flex items-center justify-start px-8 relative"
+    class="w-full h-[400px] flex flex-col justify-center items-start px-8 relative gap-2"
     style="
-      background-image: url('https://movies-proxy.vercel.app/ipx/f_webp&s_1220x659/tmdb/fTrQsdMS2MUw00RnzH0r3JWHhts.jpg');
-      background-size: auto;
+      background-image: url('https://movies-proxy.vercel.app/ipx/f_webp&s_2440x1318/tmdb/fTrQsdMS2MUw00RnzH0r3JWHhts.jpg');
+      background-size: cover;
       background-position: center;
-      background-position-y: -100px;
     "
   >
     <div
-      class="absolute inset-0 z-10"
-      style="
-        background: linear-gradient(
-          to top,
-          rgba(0, 0, 0, 0.95) 0%,
-          rgba(0, 0, 0, 0.7) 60%,
-          rgba(0, 0, 0, 0.2) 100%
-        );
-      "
+      class="absolute inset-0 bg-gradient-to-b from-black/0 to-black z-0"
     ></div>
-    <div class="flex flex-col gap-2 z-20">
-      <h1 class="text-3xl font-semibold z-20">A Working Man</h1>
-      <div class="flex gap-2 items-center">
-        <div class="flex gap-1 items-center">
-          <Icon name="lucide:star" />
-          <Icon name="lucide:star" />
-          <Icon name="lucide:star" />
-          <Icon name="lucide:star" />
-          <Icon name="lucide:star" />
-        </div>
-        <span>&bull;</span>
-        <span class="text-gray-500 font-semibold">2025</span>
-        <span>&bull;</span>
-        <span class="text-gray-500 font-semibold">1h 56min</span>
+    <h1 class="text-4xl z-10 lg:text-6xl">A Working Man</h1>
+    <div class="flex gap-2 items-center text-gray-400 z-10">
+      <div class="flex">
+        <Icon name="lucide:star" style="color: #00acac" />
+        <Icon name="lucide:star" style="color: #00acac" />
+        <Icon name="lucide:star" style="color: #00acac" />
+        <Icon name="lucide:star" style="color: #00acac" />
+        <Icon name="lucide:star" style="color: #00acac" />
       </div>
-      <p
-        class="text-xs md:text-base text-gray-400 font-semibold line-clamp-3 lg:line-clamp-4 lg:max-w-[50%]"
-      >
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius eum qui
-        vero obcaecati amet ducimus vitae iusto commodi cumque enim, deserunt
-        doloremque temporibus sit ipsam odio accusamus esse asperiores doloribus
-        aspernatur, sequi saepe, est voluptatum distinctio dolorum! Assumenda
-        expedita alias rerum, quasi ipsa recusandae, blanditiis, nemo dolore
-        officia hic ratione!
-      </p>
+      <span>&bull;</span>
+      <span>2025</span>
+      <span>&bull;</span>
+      <span>1h 56min</span>
     </div>
+    <p
+      class="line-clamp-3 z-20 text-gray-300 text-xs md:text-base lg:w-[500px]"
+    >
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellendus
+      incidunt corrupti quae aperiam eum. Ut saepe officia error, quaerat
+      aliquam architecto veritatis ab nam? Expedita atque repellat, nam cum,
+      laborum eius quasi ipsa officiis, libero quaerat ut enim obcaecati rerum
+      assumenda inventore molestias ab ad ratione voluptates illum similique
+      ducimus.
+    </p>
   </div>
 </template>

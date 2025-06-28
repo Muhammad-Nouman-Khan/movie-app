@@ -1,12 +1,14 @@
 <template>
-  <div class="flex flex-col lg:flex-row min-h-screen text-white">
-    <div class="hidden lg:flex">
+  <div class="flex flex-col lg:flex-row">
+    <div class="hidden lg:block fixed top-0 left-0">
       <Sidebar />
     </div>
-    <main class="flex-1 min-h-screen bg-[#111111] overflow-y-auto lg:ml-[65px]">
+    <main
+      class="flex-1 text-white w-full min-h-[300vw] bg-[#111111] overflow-y-auto lg:pl-17"
+    >
       <slot />
     </main>
-    <div class="lg:hidden">
+    <div class="fixed bottom-0 w-full lg:hidden">
       <BottomBar />
     </div>
   </div>
