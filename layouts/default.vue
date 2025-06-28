@@ -4,7 +4,7 @@
       <Sidebar />
     </div>
     <main
-      class="flex-1 text-white w-full min-h-[300vw] bg-[#111111] overflow-y-auto lg:pl-17"
+      class="flex-1 text-white w-full min-h-screen bg-[#111111] overflow-y-auto lg:pl-17"
     >
       <slot />
     </main>
