@@ -7,11 +7,13 @@
     <div class="flex overflow-x-auto gap-2 pb-10">
       <MovieCard
         v-for="movie in movies"
+        :id="movie.id"
         :key="movie.id"
         :title="movie.title ?? null"
         :name="movie.name ?? null"
         :movie_img="`https://image.tmdb.org/t/p/w500${movie.poster_path}`"
         :rating="movie.vote_average.toFixed(1)"
+        :type="type ?? ''"
       />
     </div>
   </section>
@@ -22,6 +24,14 @@ const props = defineProps<{
   title: string;
   endpoint: string;
 }>();
+
+const type = computed(() => {
+  if (props.endpoint.includes("movie")) {
+    return "movie";
+  } else if (props.endpoint.includes("tv")) {
+    return "tv";
+  }
+});
 
 const { fetchFromTmdb } = useTmdb();
 

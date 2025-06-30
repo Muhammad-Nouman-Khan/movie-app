@@ -27,7 +27,7 @@
       </div>
       <div v-if="heroMovie?.release_date" class="flex items-center gap-2">
         <span>&bull;</span>
-        <span>{{ heroMovie?.release_date }}</span>
+        <span>{{ heroMovie.release_date }}</span>
       </div>
     </div>
     <p
@@ -58,7 +58,7 @@ const heroMovie = ref<HeroMovie | null>(null);
 const fetchHeroMovie = async () => {
   try {
     const res = await fetchFromTmdb(props.endpoint);
-    heroMovie.value = res.results[0];
+    heroMovie.value = res.results ? res.results[0] : res;
   } catch (error) {
     console.error("Error fetching hero movie:", error);
   }

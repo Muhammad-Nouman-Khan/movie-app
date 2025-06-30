@@ -1,7 +1,12 @@
 <template>
   <div>
-    <h1 class="text-2xl text-white">This is Movie Details Page</h1>
+    <Hero :endpoint="`${type}/${id}`" />
+    <MovieDetails :endpoint="`${type}/${id}`" />
   </div>
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+const route = useRoute();
+const type = route.path.split("/")[1];
+const id = route.params.id;
+</script>

@@ -1,6 +1,7 @@
 <template>
   <div
     class="flex flex-col shrink-0 w-[170px] lg:w-[250px] overflow-hidden cursor-pointer"
+    @click="navigateTo(`/${type}/${id}`)"
   >
     <div
       class="border-2 border-gray-800 w-full hover:scale-105 transition-transform duration-300 overflow-hidden"
@@ -31,5 +32,7 @@ defineProps<{
   name: string | null;
   movie_img: string;
   rating: string;
+  id: number;
+  type: string;
 }>();
 </script>
