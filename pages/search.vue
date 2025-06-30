@@ -4,9 +4,3 @@
     <p class="text-gray-300">Search page content coming soon...</p>
   </div>
 </template>
-
-<script setup lang="ts">
-definePageMeta({
-  title: "Search",
-});
-</script>
