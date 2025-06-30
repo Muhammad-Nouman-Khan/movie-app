@@ -5,7 +5,11 @@
     <div
       class="border-2 border-gray-800 w-full hover:scale-105 transition-transform duration-300 overflow-hidden"
     >
-      <img :src="movie_img" :alt="title" class="w-full h-full object-contain" />
+      <img
+        :src="movie_img"
+        :alt="title || name || ''"
+        class="w-full h-full object-contain"
+      />
     </div>
     <h3 class="mt-2 text-base">{{ title || name }}</h3>
     <div class="flex gap-2 items-center">

@@ -8,8 +8,8 @@
       <MovieCard
         v-for="movie in movies"
         :key="movie.id"
-        :title="movie.title"
-        :name="movie.name"
+        :title="movie.title ?? null"
+        :name="movie.name ?? null"
         :movie_img="`https://image.tmdb.org/t/p/w500${movie.poster_path}`"
         :rating="movie.vote_average.toFixed(1)"
       />
@@ -39,7 +39,6 @@ const fetchMovies = async () => {
   try {
     const response = await fetchFromTmdb(props.endpoint);
     movies.value = response.results;
-    console.log("Movies:", movies.value);
   } catch (error) {
     console.error("Error fetching movies:", error);
   }
