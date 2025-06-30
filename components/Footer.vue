@@ -4,7 +4,7 @@
       <img src="/logo.webp" alt="logo" />
       <h2 class="text-xl">Nuxt Movies</h2>
     </div>
-    <div class="flex items-center gap-2">
+    <div class="flex items-center gap-2 mt-5">
       <h2 class="text-sm text-gray-400">Made with</h2>
       <NuxtLink
         to="https://nuxt.com/"
