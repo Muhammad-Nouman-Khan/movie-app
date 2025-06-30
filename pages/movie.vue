@@ -1,7 +1,10 @@
 <template>
-  <div class="container mx-auto px-4 py-8">
-    <h1 class="text-3xl font-bold mb-6">Movies</h1>
-    <p class="text-gray-300">Movie page content coming soon...</p>
+  <div>
+    <Hero endpoint="movie/popular" />
+    <MovieSection title="Popular Movies" endpoint="movie/popular" />
+    <MovieSection title="Top Rated Movies" endpoint="movie/top_rated" />
+    <MovieSection title="Upcoming Movies" endpoint="movie/upcoming" />
+    <MovieSection title="Now Playing Movies" endpoint="movie/now_playing" />
   </div>
 </template>
 

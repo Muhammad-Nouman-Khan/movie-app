@@ -39,6 +39,10 @@
 <script setup lang="ts">
 const { fetchFromTmdb } = useTmdb();
 
+const props = defineProps<{
+  endpoint: string;
+}>();
+
 type HeroMovie = {
   backdrop_path: string | null;
   title: string;
@@ -50,7 +54,7 @@ const heroMovie = ref<HeroMovie | null>(null);
 
 const fetchHeroMovie = async () => {
   try {
-    const res = await fetchFromTmdb("movie/popular");
+    const res = await fetchFromTmdb(props.endpoint);
     heroMovie.value = res.results[0];
   } catch (error) {
     console.error("Error fetching hero movie:", error);
