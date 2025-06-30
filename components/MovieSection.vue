@@ -9,6 +9,7 @@
         v-for="movie in movies"
         :key="movie.id"
         :title="movie.title"
+        :name="movie.name"
         :movie_img="`https://image.tmdb.org/t/p/w500${movie.poster_path}`"
         :rating="movie.vote_average.toFixed(1)"
       />
@@ -26,7 +27,8 @@ const { fetchFromTmdb } = useTmdb();
 
 type Movie = {
   id: number;
-  title: string;
+  title: string | null;
+  name: string | null;
   poster_path: string;
   vote_average: number;
 };

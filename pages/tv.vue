@@ -1,7 +1,9 @@
 <template>
-  <div class="container mx-auto px-4 py-8">
-    <h1 class="text-3xl font-bold mb-6">TV Shows</h1>
-    <p class="text-gray-300">TV shows page content coming soon...</p>
+  <div>
+    <Hero endpoint="tv/popular" />
+    <MovieSection title="Popular TV Shows" endpoint="tv/popular" />
+    <MovieSection title="Top Rated TV Shows" endpoint="tv/top_rated" />
+    <MovieSection title="Airing Today TV Shows" endpoint="tv/airing_today" />
   </div>
 </template>
 

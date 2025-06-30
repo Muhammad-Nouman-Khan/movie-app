@@ -14,7 +14,9 @@
     <div
       class="absolute inset-0 bg-gradient-to-b from-black/0 to-black z-0"
     ></div>
-    <h1 class="text-4xl z-10 lg:text-6xl">{{ heroMovie?.title }}</h1>
+    <h1 class="text-4xl z-10 lg:text-6xl">
+      {{ heroMovie?.title || heroMovie?.name }}
+    </h1>
     <div class="flex gap-2 items-center text-gray-400 z-10">
       <div class="flex">
         <Icon name="lucide:star" style="color: #00acac" />
@@ -23,10 +25,10 @@
         <Icon name="lucide:star" style="color: #00acac" />
         <Icon name="lucide:star" style="color: #00acac" />
       </div>
-      <span>&bull;</span>
-      <span>{{ heroMovie?.release_date }}</span>
-      <span>&bull;</span>
-      <span>1h 56min</span>
+      <div v-if="heroMovie?.release_date" class="flex items-center gap-2">
+        <span>&bull;</span>
+        <span>{{ heroMovie?.release_date }}</span>
+      </div>
     </div>
     <p
       class="line-clamp-3 z-20 text-gray-300 text-xs md:text-base lg:w-[500px]"
@@ -45,7 +47,8 @@ const props = defineProps<{
 
 type HeroMovie = {
   backdrop_path: string | null;
-  title: string;
+  title: string | null;
+  name: string | null;
   release_date: string;
   overview: string;
 };

@@ -7,7 +7,7 @@
     >
       <img :src="movie_img" :alt="title" class="w-full h-full object-contain" />
     </div>
-    <h3 class="mt-2 text-base">{{ title }}</h3>
+    <h3 class="mt-2 text-base">{{ title || name }}</h3>
     <div class="flex gap-2 items-center">
       <div class="flex items-center">
         <Icon name="lucide:star" style="color: #00acac" />
@@ -23,7 +23,8 @@
 
 <script setup lang="ts">
 defineProps<{
-  title: string;
+  title: string | null;
+  name: string | null;
   movie_img: string;
   rating: string;
 }>();
