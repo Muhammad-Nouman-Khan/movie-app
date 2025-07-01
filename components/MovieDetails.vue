@@ -1,11 +1,40 @@
 <template>
   <div class="p-4">
-    <div class="flex items-center justify-center w-full gap-8 text-white py-8">
-      <h1 class="cursor-pointer text-2xl">OVERVIEW</h1>
-      <h1 class="cursor-pointer text-2xl">VIDEOS</h1>
-      <h1 class="cursor-pointer text-2xl">PHOTOS</h1>
+    <div
+      class="flex items-center justify-center w-full gap-8 py-8 text-gray-700"
+    >
+      <h1
+        v-for="link in links"
+        :key="link"
+        class="cursor-pointer text-xl md:text-2xl"
+        :class="isActive === link ? 'text-white' : 'text-gray-700'"
+        @click="isActive = link"
+      >
+        {{ link }}
+      </h1>
     </div>
-    <div class="flex gap-4">
+    <div v-if="isActive === 'VIDEOS'" class="px-4">
+      <h1 class="text-2xl text-gray-400">0 Videos</h1>
+    </div>
+    <div v-if="isActive === 'PHOTOS'" class="px-4">
+      <div class="flex flex-col gap-4">
+        <h1 class="text-2xl">Backdrops</h1>
+        <img
+          :src="`https://image.tmdb.org/t/p/original${movieDetails?.backdrop_path}`"
+          alt=""
+          class="w-full object-contain md:w-[600px]"
+        />
+      </div>
+      <div class="flex flex-col gap-4">
+        <h1 class="text-2xl">Posters</h1>
+        <img
+          :src="`https://image.tmdb.org/t/p/original${movieDetails?.poster_path}`"
+          alt=""
+          class="object-contain w-[350px]"
+        />
+      </div>
+    </div>
+    <div v-if="isActive === 'OVERVIEW'" class="flex gap-4 px-4">
       <div class="hidden md:flex lg:w-[500px] w-[300px] h-[500px]">
         <img
           :src="`https://image.tmdb.org/t/p/original${movieDetails?.poster_path}`"
@@ -74,6 +103,7 @@ const { fetchFromTmdb } = useTmdb();
 
 type MovieDetails = {
   poster_path: string;
+  backdrop_path: string;
   overview: string;
   release_date: string;
   budget: number;
@@ -101,6 +131,10 @@ const fetchMovieDetails = async () => {
     console.error("Error fetching movie details:", error);
   }
 };
+
+const isActive = ref("OVERVIEW");
+
+const links = ["OVERVIEW", "VIDEOS", "PHOTOS"];
 
 onMounted(() => {
   fetchMovieDetails();
