@@ -9,25 +9,20 @@ MovieVerse is a modern and responsive movie web application built using **Nuxt.j
 ## 🚀 Features
 
 - 🌐 Built with Nuxt 3 and Composition API
-- 🔍 Search movies by title
 - 📊 Browse movies by categories: Popular, Top Rated, Upcoming
 - 🎞️ Detailed movie pages with:
   - Poster
   - Overview
-  - Ratings
   - Genres
-  - Release date
-  - Trailer (YouTube)
   - Similar movies section
 - 📱 Responsive design for mobile and desktop
-- 🌙 Dark mode support (optional)
 
 ## 🛠️ Tech Stack
 
 - **Frontend**: [Nuxt.js 3](https://nuxt.com/)
 - **Styling**: [Tailwind CSS](https://tailwindcss.com/)
 - **API**: [TMDB API](https://www.themoviedb.org/)
-- **Icons**: [Heroicons](https://heroicons.com/), [Lucide](https://lucide.dev/)
+- **Icons**: [Lucide](https://lucide.dev/)
 
 ## 📦 Setup & Installation
 
@@ -35,3 +30,4 @@ MovieVerse is a modern and responsive movie web application built using **Nuxt.j
    ```bash
    git clone https://github.com/your-username/movieverse.git
    cd movieverse
+   ```
