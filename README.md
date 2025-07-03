@@ -29,5 +29,21 @@ MovieVerse is a modern and responsive movie web application built using **Nuxt.j
 1. **Clone the repository**
    ```bash
    https://github.com/Muhammad-Nouman-Khan/movie-app.git
-   cd movieverse
+   cd movie-app
    ```
+2. Install dependencies
+   ```bash
+   npm install
+   ```
+3. Add TMDB API Key
+  Create a .env file in the root directory:
+  ```bash
+  TMDB_API_KEY=your_tmdb_api_key_here
+  ```
+4. Run the development server
+  ```bash
+  npm run dev
+```
+
+
+   
