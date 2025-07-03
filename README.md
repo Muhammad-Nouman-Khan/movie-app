@@ -4,7 +4,7 @@ MovieVerse is a modern and responsive movie web application built using **Nuxt.j
 
 ## 🖼️ Preview
 
-![NuxtMovies Live Demo](https://nommovieapp.vercel.app/)
+[NuxtMovies Live Demo](https://nommovieapp.vercel.app/)
 
 ## 🚀 Features
 
