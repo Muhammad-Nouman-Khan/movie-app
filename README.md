@@ -1,6 +1,6 @@
 # 🎬 NuxtMovies - Nuxt.js Movie App
 
-MovieVerse is a modern and responsive movie web application built using **Nuxt.js**. It allows users to explore popular, top-rated, and upcoming movies using data fetched from the **TMDB API**. Users can also view detailed movie pages, including  genres, runtime, and similar movies.
+NuxtMovies is a modern and responsive movie web application built using **Nuxt.js**. It allows users to explore popular, top-rated, and upcoming movies using data fetched from the **TMDB API**. Users can also view detailed movie pages, including  genres, runtime, and similar movies.
 
 ## 🖼️ Preview
 
