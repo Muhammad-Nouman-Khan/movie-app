@@ -43,7 +43,7 @@ NuxtMovies is a modern and responsive movie web application built using **Nuxt.j
 4. Run the development server
   ```bash
   npm run dev
-```
+  ```
 
 
    
