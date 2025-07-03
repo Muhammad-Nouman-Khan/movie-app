@@ -1,75 +1,37 @@
-# Nuxt Minimal Starter
+# 🎬 NuxtMovies - Nuxt.js Movie App
 
-Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+MovieVerse is a modern and responsive movie web application built using **Nuxt.js**. It allows users to explore popular, top-rated, and upcoming movies using data fetched from the **TMDB API**. Users can also view detailed movie pages, including  genres, runtime, and similar movies.
 
-## Setup
+## 🖼️ Preview
 
-Make sure to install dependencies:
+![MovieVerse Screenshot](./public/screenshot.png)
 
-```bash
-# npm
-npm install
+## 🚀 Features
 
-# pnpm
-pnpm install
+- 🌐 Built with Nuxt 3 and Composition API
+- 🔍 Search movies by title
+- 📊 Browse movies by categories: Popular, Top Rated, Upcoming
+- 🎞️ Detailed movie pages with:
+  - Poster
+  - Overview
+  - Ratings
+  - Genres
+  - Release date
+  - Trailer (YouTube)
+  - Similar movies section
+- 📱 Responsive design for mobile and desktop
+- 🌙 Dark mode support (optional)
 
-# yarn
-yarn install
+## 🛠️ Tech Stack
 
-# bun
-bun install
-```
+- **Frontend**: [Nuxt.js 3](https://nuxt.com/)
+- **Styling**: [Tailwind CSS](https://tailwindcss.com/)
+- **API**: [TMDB API](https://www.themoviedb.org/)
+- **Icons**: [Heroicons](https://heroicons.com/), [Lucide](https://lucide.dev/)
 
-## Development Server
+## 📦 Setup & Installation
 
-Start the development server on `http://localhost:3000`:
-
-```bash
-# npm
-npm run dev
-
-# pnpm
-pnpm dev
-
-# yarn
-yarn dev
-
-# bun
-bun run dev
-```
-
-## Production
-
-Build the application for production:
-
-```bash
-# npm
-npm run build
-
-# pnpm
-pnpm build
-
-# yarn
-yarn build
-
-# bun
-bun run build
-```
-
-Locally preview production build:
-
-```bash
-# npm
-npm run preview
-
-# pnpm
-pnpm preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/your-username/movieverse.git
+   cd movieverse
