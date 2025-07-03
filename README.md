@@ -28,6 +28,6 @@ MovieVerse is a modern and responsive movie web application built using **Nuxt.j
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/your-username/movieverse.git
+   https://github.com/Muhammad-Nouman-Khan/movie-app.git
    cd movieverse
    ```
